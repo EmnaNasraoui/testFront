@@ -1,0 +1,45 @@
+
+.firstbox{
+    margin-top: 40px;
+    background-color: #f8f8f8;
+    height: 212px;
+    border-radius: 10px;
+    border-top: 20px solid #ef4847;
+    padding-left: 3%;
+}
+
+.profile{
+  background-color: white;
+  box-shadow: 0px 1px 9.9px 0.1px rgba(187, 185, 185, 0.27);
+  height: 80px;
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 8%;
+}
+
+.contact{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.name {
+  margin-left: 52%;
+  margin-top: -24%;
+  margin-bottom: 22%;
+}
+.icon {
+  margin-left: 33%;
+}
+.imgProfileStyle {
+  border: 1px solid  #ef4847;
+  height: 68px;
+  width: 68px;
+  padding: 9%;
+  border-radius: 2.25rem!important;
+}
+.cardStyle{
+  background-color: #f8f8f8;
+  border: none;
+}

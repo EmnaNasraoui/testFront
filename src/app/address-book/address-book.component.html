@@ -1,0 +1,150 @@
+<div class="container py-2 py-sm-5">
+  <div class="card-top lineColor">
+  </div>
+  <div class="card text-center cardStyle">
+    <div class="card-body">
+      <div class="card-title">
+        <input type="text" class="form-control" style="width:75%;display: inline;" name="search"
+          [(ngModel)]="searchText" autocomplete="off" placeholder="Search">
+      </div>
+      <div class="card-text">
+        <a (click)="addToFilter('A')" class="AlphStyle">A</a><a (click)="addToFilter('B')" class="AlphStyle">B</a><a
+          (click)="addToFilter('C')" class="AlphStyle">C</a><a class="AlphStyle" (click)="addToFilter('D')">D</a><a
+          class="AlphStyle" (click)="addToFilter('E')">E</a><a (click)="addToFilter('F')" class="AlphStyle">F</a><a
+          class="AlphStyle" (click)="addToFilter('G')">G</a><a (click)="addToFilter('H')" class="AlphStyle">H</a><a
+          class="AlphStyle" (click)="addToFilter('I')">I</a><a class="AlphStyle" (click)="addToFilter('G')">G</a><a
+          class="AlphStyle" (click)="addToFilter('K')">K</a><a (click)="addToFilter('L')" class="AlphStyle">L</a><a
+          class="AlphStyle" (click)="addToFilter('M')">M</a><a class="AlphStyle" (click)="addToFilter('N')">N</a><a
+          class="AlphStyle" (click)="addToFilter('O')">O</a><a class="AlphStyle" (click)="addToFilter('P')">P</a><a
+          class="AlphStyle" (click)="addToFilter('Q')">Q</a><a class="AlphStyle" (click)="addToFilter('R')">R</a><a
+          (click)="addToFilter('S')" class="AlphStyle">S</a><a class="AlphStyle" (click)="addToFilter('T')">T</a>
+        <a class="AlphStyle" (click)="addToFilter('V')">V</a><a class="AlphStyle" (click)="addToFilter('U')">U</a><a
+          class="AlphStyle" (click)="addToFilter('W')">W</a><a class="AlphStyle" (click)="addToFilter('X')">X</a><a
+          class="AlphStyle" (click)="addToFilter('Y')">Y</a><a (click)="addToFilter('Z')" class="AlphStyle">Z</a>
+      </div>
+      <!-- <div class="row">
+        <div class="card col-md-4 styleCard">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-md-6">
+                <img class="imgProfileStyle" src="./../assets/icons/profile.png" alt="">
+              </div>
+              <div class="col-md-6" style="color: #c7ccd1;">
+                <p>JOHN DOE</p>
+                <P>0123456789</P>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-4 styleCard">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img class="imgProfileStyle" src="./../assets/icons/profile.png" alt="">
+              </div>
+              <div class="col-md-6" style="color: #c7ccd1;">
+                <p>JOHN DOE</p>
+                <P>0123456789</P>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-4 styleCard">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img class="imgProfileStyle" src="./../assets/icons/profile.png" alt="">
+              </div>
+              <div class="col-md-6" style="color: #c7ccd1;">
+                <p>JOHN DOE</p>
+                <P>0123456789</P>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card col-md-4 styleCard">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-md-6">
+                <img class="imgProfileStyle" src="./../assets/icons/profile.png" alt="">
+              </div>
+              <div class="col-md-6" style="color: #c7ccd1;">
+                <p>JOHN DOE</p>
+                <P>0123456789</P>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-4 styleCard">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img class="imgProfileStyle" src="./../assets/icons/profile.png" alt="">
+              </div>
+              <div class="col-md-6" style="color: #c7ccd1;">
+                <p>JOHN DOE</p>
+                <P>0123456789</P>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-4 styleCard">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img class="imgProfileStyle" src="./../assets/icons/profile.png" alt="">
+              </div>
+              <div class="col-md-6" style="color: #c7ccd1;">
+                <p>JOHN DOE</p>
+                <P>0123456789</P>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="row" style="width: 100%;">
+        <div class="card col-md-4 styleCard" *ngFor="let profile of profiles | filter:searchText, let i = index">
+          <div class="card-body" [routerLink]="['/contact',profile.name, profile.number]" style="cursor: pointer;">
+            <div class="row">
+              <div class="col-md-6">
+                <img class="imgProfileStyle" src="./../assets/icons/profile.png" alt="">
+              </div>
+              <div class="col-md-6" style="color: #c7ccd1;">
+                <p> {{profile.name}}</p>
+                <P>{{profile.number}}</P>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card col-md-4 styleCard">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img class="imgProfileStyle" src="./../assets/icons/profile.png" alt="">
+              </div>
+              <div class="col-md-6" style="color: #c7ccd1;">
+                <p>JOHN DOE</p>
+                <P>0123456789</P>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card col-md-4 styleCard">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img class="imgProfileStyle" src="./../assets/icons/profile.png" alt="">
+              </div>
+              <div class="col-md-6" style="color: #c7ccd1;">
+                <p>JOHN DOE</p>
+                <P>0123456789</P>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
